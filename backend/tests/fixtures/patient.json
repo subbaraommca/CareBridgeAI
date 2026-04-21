@@ -1,0 +1,53 @@
+{
+  "resourceType": "Patient",
+  "id": "cbai-patient-1001",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/Patient"
+    ],
+    "tag": [
+      {
+        "system": "https://carebridge.ai/test-data",
+        "code": "synthetic-demo-data",
+        "display": "Synthetic Test/Demo Data"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic demo patient for CareBridge AI transition-of-care testing.</div>"
+  },
+  "identifier": [
+    {
+      "system": "https://carebridge.ai/demo/mrn",
+      "value": "DEMO-MRN-1001"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Synthetic",
+      "given": [
+        "Taylor"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1978-09-12",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-0100",
+      "use": "mobile"
+    }
+  ],
+  "communication": [
+    {
+      "language": {
+        "text": "English"
+      },
+      "preferred": true
+    }
+  ]
+}

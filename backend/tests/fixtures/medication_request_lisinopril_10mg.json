@@ -1,0 +1,50 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "cbai-medreq-5001",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://carebridge.ai/test-data",
+        "code": "synthetic-demo-data",
+        "display": "Synthetic Test/Demo Data"
+      }
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "314076",
+        "display": "Lisinopril 10 MG Oral Tablet"
+      }
+    ],
+    "text": "Lisinopril 10 mg tablet"
+  },
+  "subject": {
+    "reference": "Patient/cbai-patient-1001"
+  },
+  "encounter": {
+    "reference": "Encounter/cbai-encounter-ed-2001"
+  },
+  "authoredOn": "2026-03-18T11:05:00Z",
+  "requester": {
+    "display": "Avery Chen, MD"
+  },
+  "dosageInstruction": [
+    {
+      "text": "Take 1 tablet by mouth once daily",
+      "route": {
+        "text": "Oral"
+      },
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "cbai-medstmt-6001",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://carebridge.ai/test-data",
+        "code": "synthetic-demo-data",
+        "display": "Synthetic Test/Demo Data"
+      }
+    ]
+  },
+  "status": "active",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "314077",
+        "display": "Lisinopril 20 MG Oral Tablet"
+      }
+    ],
+    "text": "Lisinopril 20 mg tablet"
+  },
+  "subject": {
+    "reference": "Patient/cbai-patient-1001"
+  },
+  "effectiveDateTime": "2026-03-18T09:20:00Z",
+  "informationSource": {
+    "display": "Patient report during ED triage"
+  },
+  "dosage": [
+    {
+      "text": "Patient reports taking 1 tablet by mouth daily",
+      "route": {
+        "text": "Oral"
+      },
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      }
+    }
+  ]
+}

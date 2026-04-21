@@ -1,0 +1,40 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    command: uvicorn --app-dir backend app.main:app --host 0.0.0.0 --port 8000 --reload
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ..:/app
+    environment:
+      CAREBRIDGE_ENVIRONMENT: docker
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.0-flash}
+      FHIR_BASE_URL: ${FHIR_BASE_URL:-http://host.docker.internal:8080/fhir}
+      FHIR_ACCESS_TOKEN: ${FHIR_ACCESS_TOKEN:-}
+      POSTGRES_URL: ${POSTGRES_URL:-postgresql://carebridge:carebridge@postgres:5432/carebridge}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: carebridge
+      POSTGRES_USER: carebridge
+      POSTGRES_PASSWORD: carebridge
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U carebridge -d carebridge"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

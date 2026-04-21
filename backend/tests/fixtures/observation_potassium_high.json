@@ -1,0 +1,67 @@
+{
+  "resourceType": "Observation",
+  "id": "cbai-observation-7001",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://carebridge.ai/test-data",
+        "code": "synthetic-demo-data",
+        "display": "Synthetic Test/Demo Data"
+      }
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "text": "Laboratory"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2823-3",
+        "display": "Potassium [Moles/volume] in Serum or Plasma"
+      }
+    ],
+    "text": "Potassium"
+  },
+  "subject": {
+    "reference": "Patient/cbai-patient-1001"
+  },
+  "encounter": {
+    "reference": "Encounter/cbai-encounter-ed-2001"
+  },
+  "effectiveDateTime": "2026-03-18T10:48:00Z",
+  "issued": "2026-03-18T10:53:00Z",
+  "valueQuantity": {
+    "value": 5.8,
+    "unit": "mmol/L",
+    "system": "http://unitsofmeasure.org",
+    "code": "mmol/L"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "H",
+          "display": "High"
+        }
+      ],
+      "text": "High"
+    }
+  ],
+  "referenceRange": [
+    {
+      "low": {
+        "value": 3.5,
+        "unit": "mmol/L"
+      },
+      "high": {
+        "value": 5.1,
+        "unit": "mmol/L"
+      }
+    }
+  ]
+}

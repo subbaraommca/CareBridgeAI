@@ -1,0 +1,54 @@
+{
+  "resourceType": "Encounter",
+  "id": "cbai-encounter-ed-2001",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://carebridge.ai/test-data",
+        "code": "synthetic-demo-data",
+        "display": "Synthetic Test/Demo Data"
+      }
+    ]
+  },
+  "status": "finished",
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "EMER",
+    "display": "emergency"
+  },
+  "subject": {
+    "reference": "Patient/cbai-patient-1001",
+    "display": "Taylor Synthetic"
+  },
+  "period": {
+    "start": "2026-03-18T09:14:00Z",
+    "end": "2026-03-18T14:42:00Z"
+  },
+  "serviceProvider": {
+    "display": "CareBridge Demo Medical Center"
+  },
+  "location": [
+    {
+      "location": {
+        "display": "Emergency Department Bay 4"
+      }
+    }
+  ],
+  "participant": [
+    {
+      "individual": {
+        "display": "Avery Chen, MD"
+      }
+    }
+  ],
+  "reasonCode": [
+    {
+      "text": "Dizziness and generalized weakness"
+    }
+  ],
+  "hospitalization": {
+    "dischargeDisposition": {
+      "text": "Discharged home with close PCP follow-up"
+    }
+  }
+}
